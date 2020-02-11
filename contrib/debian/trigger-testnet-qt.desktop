@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Trigger (testnet)
+Comment=Desktop allet for Trigger Cryptocurrency (testnet)
+Comment[de]=Offizieller Client für die Kryptowährung Trigger (testnet)
+Exec=trigger-qt -testnet %u
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/trigger-testnet128.png
+MimeType=x-scheme-handler/trigger;
+Categories=Application;Network;

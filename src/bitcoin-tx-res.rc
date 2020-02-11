@@ -1,0 +1,35 @@
+#include <windows.h>             // needed for VERSIONINFO
+#include "clientversion.h"       // holds the needed client version information
+
+#define VER_PRODUCTVERSION     TRIGGER_VERSION_MAJOR,TRIGGER_VERSION_MINOR,TRIGGER_VERSION_REVISION,TRIGGER_VERSION_BUILD
+#define VER_PRODUCTVERSION_STR STRINGIZE(TRIGGER_VERSION_MAJOR) "." STRINGIZE(TRIGGER_VERSION_MINOR) "." STRINGIZE(TRIGGER_VERSION_REVISION) "." STRINGIZE(TRIGGER_VERSION_BUILD)
+#define VER_FILEVERSION        VER_PRODUCTVERSION
+#define VER_FILEVERSION_STR    VER_PRODUCTVERSION_STR
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION     VER_FILEVERSION
+PRODUCTVERSION  VER_PRODUCTVERSION
+FILEOS          VOS_NT_WINDOWS32
+FILETYPE        VFT_APP
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4" // U.S. English - multilingual (hex)
+        BEGIN
+            VALUE "CompanyName",        "Trigger"
+            VALUE "FileDescription",    "trigger-tx (CLI Trigger transaction editor utility)"
+            VALUE "FileVersion",        VER_FILEVERSION_STR
+            VALUE "InternalName",       "trigger-tx"
+            VALUE "LegalCopyright",     COPYRIGHT_STR
+            VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
+            VALUE "OriginalFilename",   "trigger-tx.exe"
+            VALUE "ProductName",        "trigger-tx"
+            VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
+        END
+    END
+
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1252 // language neutral - multilingual (decimal)
+    END
+END

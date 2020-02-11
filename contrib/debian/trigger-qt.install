@@ -1,0 +1,11 @@
+usr/local/bin/trigger-qt usr/bin
+share/pixmaps/trigger16.png usr/share/pixmaps
+share/pixmaps/trigger32.png usr/share/pixmaps
+share/pixmaps/trigger128.png usr/share/pixmaps
+share/pixmaps/trigger256.png usr/share/pixmaps
+share/pixmaps/trigger-testnet32.png usr/share/pixmaps
+share/pixmaps/trigger-testnet128.png usr/share/pixmaps
+share/pixmaps/trigger-testnet256.png usr/share/pixmaps
+debian/trigger-qt.desktop usr/share/applications
+debian/trigger-testnet-qt.desktop usr/share/applications
+debian/trigger-qt.protocol usr/share/kde4/services/

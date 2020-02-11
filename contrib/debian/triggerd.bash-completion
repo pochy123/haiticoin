@@ -1,0 +1,3 @@
+contrib/triggerd.bash-completion	triggerd
+contrib/trigger-cli.bash-completion	trigger-cli
+contrib/trigger-tx.bash-completion	trigger-tx
