@@ -56,7 +56,7 @@ public:
         consensus.nTotalPOWBlock = consensus.nPOWBlockEpoch * 4; //4 epoch
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
-        consensus.nStartMiningTime = 1581512700;
+        consensus.nStartMiningTime = 1581519900;
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x00"); // 350000
@@ -76,11 +76,11 @@ public:
         vAlertPubKey = ParseHex("04454522d6253511a5ad9bd959213d6081c19a2349e7739a84812f8ac509ce7eec2f827de314bbae866e9ffc12f534de29fec5931768cad978db66ade63baa4425");
         nDefaultPort = 9166;
 
-        genesis = CreateGenesisBlock(1581426194, 400016708, 0x1e0fffff, 1, 0);
+        genesis = CreateGenesisBlock(1581426196, 600035180, 0x1e0fffff, 1, 0);
 //        MineGenesisBlock(genesis, consensus.powLimit);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("882c03dd66232994d00aa59b08dc2c9e989f83575ce3881b00702d68064088b0"));
-        assert(genesis.hashMerkleRoot == uint256S("dfe47f288e7019fef13b0015f48b9416495c2aa462d4ed2d0f3c864fcbbecd8b"));
+        assert(consensus.hashGenesisBlock == uint256S("854d7df4269fab0078483472fa0291affc0a767e51194021e04810fa8476be7e"));
+        assert(genesis.hashMerkleRoot == uint256S("4020bcd641786e479392ef0b55aa17c00c39818a188edf8262a2c1ba1be62707"));
 
         // nodes with support for servicebits filtering should be at the top
         vSeeds.emplace_back("35.223.108.1");
@@ -106,9 +106,9 @@ public:
         fMineBlocksOnDemand = false;
 
         checkpointData = {
-            {
-                {0, uint256S("882c03dd66232994d00aa59b08dc2c9e989f83575ce3881b00702d68064088b0")},
-            }
+                {
+                        {0, uint256S("854d7df4269fab0078483472fa0291affc0a767e51194021e04810fa8476be7e")},
+                }
         };
 
         chainTxData = ChainTxData{
@@ -200,7 +200,7 @@ public:
         checkpointData = {
                 {
                         {0, uint256S("fb6945d0c081953e96fb3e173b844e459d950e560840015b7f303b8fdf996332")},
-            }
+                }
         };
 
         chainTxData = ChainTxData{
@@ -244,7 +244,7 @@ public:
 
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
-        consensus.nStartMiningTime = 1581440700;
+        consensus.nStartMiningTime = 1581514320;
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x00");
@@ -270,15 +270,15 @@ public:
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
 
         checkpointData = {
-            {
-                {0, uint256S("123d7466cd1a465d0f18e1c34c967733e4827fd01bbc61144b86cca75613e1bc")},
-            }
+                {
+                        {0, uint256S("123d7466cd1a465d0f18e1c34c967733e4827fd01bbc61144b86cca75613e1bc")},
+                }
         };
 
         chainTxData = ChainTxData{
-            0,
-            0,
-            0
+                0,
+                0,
+                0
         };
 
         base58Prefixes[PUBKEY_ADDRESS] = {0x80}; // t
