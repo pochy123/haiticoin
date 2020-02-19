@@ -57,6 +57,8 @@ public:
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nStartMiningTime = 1581519900;
+        consensus.nDgwPastBlocks = 30;
+        consensus.nDGWStartHeight = 3450;
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x00"); // 350000
@@ -106,9 +108,9 @@ public:
         fMineBlocksOnDemand = false;
 
         checkpointData = {
-                {
-                        {0, uint256S("854d7df4269fab0078483472fa0291affc0a767e51194021e04810fa8476be7e")},
-                }
+            {
+                {0, uint256S("854d7df4269fab0078483472fa0291affc0a767e51194021e04810fa8476be7e")},
+            }
         };
 
         chainTxData = ChainTxData{
@@ -152,6 +154,8 @@ public:
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nStartMiningTime = 1581440700;
+        consensus.nDgwPastBlocks = 30;
+        consensus.nDGWStartHeight = 2000;
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x00");
@@ -200,7 +204,7 @@ public:
         checkpointData = {
                 {
                         {0, uint256S("fb6945d0c081953e96fb3e173b844e459d950e560840015b7f303b8fdf996332")},
-                }
+            }
         };
 
         chainTxData = ChainTxData{
@@ -245,6 +249,8 @@ public:
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = true;
         consensus.nStartMiningTime = 1581514320;
+        consensus.nDgwPastBlocks = 30;
+        consensus.nDGWStartHeight = 2000;
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x00");
@@ -270,15 +276,15 @@ public:
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
 
         checkpointData = {
-                {
-                        {0, uint256S("123d7466cd1a465d0f18e1c34c967733e4827fd01bbc61144b86cca75613e1bc")},
-                }
+            {
+                {0, uint256S("123d7466cd1a465d0f18e1c34c967733e4827fd01bbc61144b86cca75613e1bc")},
+            }
         };
 
         chainTxData = ChainTxData{
-                0,
-                0,
-                0
+            0,
+            0,
+            0
         };
 
         base58Prefixes[PUBKEY_ADDRESS] = {0x80}; // t
