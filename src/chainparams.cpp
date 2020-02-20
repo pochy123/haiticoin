@@ -58,7 +58,7 @@ public:
         consensus.fPowNoRetargeting = false;
         consensus.nStartMiningTime = 1581519900;
         consensus.nDgwPastBlocks = 30;
-        consensus.nDGWStartHeight = 3450;
+        consensus.nDGWStartHeight = 4100;
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x00"); // 350000
